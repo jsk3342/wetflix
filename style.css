@@ -1,5 +1,5 @@
 /* reset */
-body, h1, h2, h3, p, ul {
+body, h1, h2, h3, p, ul, dl, dd {
   margin: 0;
   padding: 0;
 }
@@ -74,7 +74,7 @@ button {
   max-width: 180px;
   padding-top: 140.45%;
   position: relative;  
-  border: 1px solid #BDBDBD;
+  outline: 1px solid #BDBDBD;
   box-sizing: border-box;
   border-radius: 10px;  
   overflow: hidden;
@@ -112,36 +112,6 @@ button {
   border-bottom-left-radius: 10px;
   border-top: 1px solid #BDBDBD;
 }
-
-footer {
-  background-color: #F2F2F2;
-}
-
-.footer-wrap {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 35px 0;
-}
-
-.footer-top-wrap {
-  border-bottom: 1px solid #C4C4C4;  
-  padding: 18px 0 42px;
-  display: flex;
-}
-
-.sns-ltems {
-  border: 2px solid orange;
-}
-
-.sns-ltems a {
-  display: inline-block;
-}
-
-.sns-ltems a img {
-  width: 24px;
-  height: 24px;  
-}
-
 
 /* design */
 
@@ -230,5 +200,61 @@ footer {
 }
 
 /* footer */
-.footer-title {
+.footer {
+  background-color: #F2F2F2;
+  padding: 35px 0;
+}
+
+.footer-top,
+.footer-bottom {
+  max-width: 1280px;
+  margin: 0 auto;
+  
+}
+
+.footer-top {
+  border-bottom: 1px solid #C4C4C4;  
+  padding: 18px 0 42px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sns-ltems a:nth-child(2) {
+  margin: 0 20px;
+}
+
+.sns-ltems a img {
+  width: 24px;
+  height: 24px;  
+}
+
+.footer-bottom {
+  margin-top: 36px;
+}
+
+.footer-bottom dt, 
+.footer-bottom dd {
+  display: inline-block;
+}
+
+.footer-bottom dt,
+.footer-bottom .bold {
+  font-weight: bold;
+}
+
+.footer-bottom dd::after {
+  content: "|";
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.footer-bottom dd:last-child:after {
+  display: none;
+}
+
+.footer-bottom dl p {
+  float: right;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
 }
